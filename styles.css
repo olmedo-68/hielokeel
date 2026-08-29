@@ -1,0 +1,523 @@
+/* ==========================================
+   VARIABLES Y PALETA DE COLORES (PLAYERA)
+   ========================================== */
+:root {
+    --rosa-keel: #e00078;      /* Rosa característico de Ke'el */
+    --verde-keel: #007a48;     /* Verde de la palmera Ke'el */
+    --azul-oceano: #00a4e4;    /* Azul brillante / mar tropical */
+    --azul-profundo: #004b7a;  /* Azul noche/mar profundo */
+    --amarillo-sol: #ffcb05;   /* Cálido sol playero */
+    --arena-fina: #fdfaf4;      /* Fondo suave cálido */
+    --blanco: #ffffff;
+    --texto-oscuro: #1c2d37;
+    --sombra-playera: 0 10px 30px rgba(0, 164, 228, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--arena-fina);
+    color: var(--texto-oscuro);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, .logo-text {
+    font-family: 'Fredoka', cursive, sans-serif;
+}
+
+/* ==========================================
+   NAVBAR FRESCA
+   ========================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 8%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--rosa-keel);
+    line-height: 1;
+}
+
+.logo-tagline {
+    font-size: 0.85rem;
+    color: var(--verde-keel);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--texto-oscuro);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--rosa-keel);
+}
+
+.btn-nav {
+    background: var(--rosa-keel);
+    color: var(--blanco) !important;
+    padding: 0.6rem 1.4rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(224, 0, 120, 0.3);
+    transition: transform 0.3s ease, background 0.3s ease !important;
+}
+
+.btn-nav:hover {
+    transform: translateY(-2px);
+    background: #c20068;
+}
+
+/* ==========================================
+   HERO PLAYERO CON DEGRADADO Y SOL
+   ========================================== */
+.hero {
+    position: relative;
+    padding: 6rem 8% 8rem 8%;
+    background: linear-gradient(135deg, #e0f7fc 0%, #ffffff 50%, #fff6d9 100%);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 75vh;
+}
+
+.hero-content {
+    max-width: 800px;
+    z-index: 2;
+}
+
+.badge {
+    background: #e0f7fa;
+    color: var(--azul-profundo);
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    border: 1px solid #b2ebf2;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    color: var(--texto-oscuro);
+    margin-bottom: 1.2rem;
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: var(--rosa-keel);
+    background: linear-gradient(45deg, var(--rosa-keel), var(--azul-oceano));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #556b78;
+    margin-bottom: 2.5rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.6);
+}
+
+.btn-secondary {
+    background: var(--azul-oceano);
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 5px 15px rgba(0, 164, 228, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-3px);
+}
+
+/* ==========================================
+   BANNER COBERTURA
+   ========================================== */
+.banner-cobertura {
+    background: linear-gradient(90deg, var(--verde-keel), #00a86b);
+    color: white;
+    text-align: center;
+    padding: 2rem 5%;
+    font-size: 1.1rem;
+}
+
+.banner-cobertura h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+}
+
+/* ==========================================
+   SECCIÓN SERVICIOS / SECTORES
+   ========================================== */
+.servicios-section {
+    padding: 5rem 8%;
+    background-color: var(--arena-fina);
+}
+
+.section-header {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 3.5rem auto;
+}
+
+.section-header h2 {
+    font-size: 2.4rem;
+    color: var(--azul-profundo);
+}
+
+.grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 2rem;
+}
+
+.card-servicio {
+    background: white;
+    padding: 2.5rem 1.5rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: var(--sombra-playera);
+    border: 2px solid #f0f8ff;
+    transition: transform 0.3s ease;
+}
+
+.card-servicio:hover {
+    transform: translateY(-8px);
+}
+
+.card-servicio .icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.card-servicio h3 {
+    color: var(--rosa-keel);
+    margin-bottom: 0.8rem;
+}
+
+/* ==========================================
+   PRODUCTOS (AJUSTE DE GRID PARA 3 TARJETAS)
+   ========================================== */
+.productos-section {
+    padding: 5rem 8%;
+    background: white;
+}
+
+.grid-productos {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.card-producto {
+    background: var(--arena-fina);
+    border-radius: 25px;
+    padding: 2.5rem 2rem;
+    width: 100%;
+    max-width: 350px; /* Tamaño optimizado para 3 productos horizontales */
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid transparent;
+}
+
+.card-producto.rosa-verde {
+    border-color: var(--rosa-keel);
+}
+
+.card-producto.azul-plano {
+    border-color: var(--azul-oceano);
+}
+
+.card-producto.verde-garrafon {
+    border-color: var(--verde-keel);
+}
+
+.tag-peso {
+    position: absolute;
+    top: -15px;
+    background: var(--rosa-keel);
+    color: white;
+    font-family: 'Fredoka', sans-serif;
+    padding: 0.4rem 1.5rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.tag-peso.azul {
+    background: var(--azul-oceano);
+}
+
+.tag-peso.verde {
+    background: var(--verde-keel);
+}
+
+/* Cortar la imagen de 5kg */
+.card-producto.rosa-verde .img-container {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    border-radius: 15px;
+    margin: 1rem 0;
+    background-color: #f5f5f5;
+}
+
+.card-producto.rosa-verde .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-producto.azul-plano .img-container {
+    width: 100%;
+    height: 320px;
+    border-radius: 15px;
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+.card-producto.azul-plano .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Contenedor e imagen del Garrafón 20 L */
+.card-producto.verde-garrafon .img-container {
+    width: 100%;
+    height: 320px;
+    border-radius: 15px;
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+.card-producto.verde-garrafon .img-container img {
+    width: 100%;
+    height: 109%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-producto h3 {
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+}
+
+.card-producto .desc {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #666;
+    margin: 0.5rem 0 1.2rem 0;
+}
+
+.features {
+    list-style: none;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.features li {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+    color: #444;
+}
+
+.btn-card {
+    background: var(--rosa-keel);
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn-card.azul {
+    background: var(--azul-oceano);
+}
+
+.btn-card.verde {
+    background: var(--verde-keel);
+}
+
+.btn-card:hover {
+    opacity: 0.9;
+}
+
+/* ==========================================
+   COMODATO SECCIÓN
+   ========================================== */
+.comodato-banner {
+    background: linear-gradient(135deg, var(--azul-profundo), var(--azul-oceano));
+    color: white;
+    padding: 4rem 8%;
+    border-radius: 30px;
+    margin: 4rem 8%;
+    text-align: center;
+}
+
+.badge-comodato {
+    background: var(--amarillo-sol);
+    color: var(--texto-oscuro);
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.comodato-banner h2 {
+    font-size: 2.2rem;
+    margin: 1rem 0;
+}
+
+.btn-comodato {
+    display: inline-block;
+    margin-top: 1.5rem;
+    background: white;
+    color: var(--azul-profundo);
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+}
+
+.btn-comodato:hover {
+    transform: scale(1.05);
+}
+
+/* ==========================================
+   FOOTER & WHATSAPP FLOTANTE
+   ========================================== */
+footer {
+    background: var(--texto-oscuro);
+    color: white;
+    text-align: center;
+    padding: 3rem 5%;
+}
+
+footer h3 {
+    color: var(--amarillo-sol);
+    font-size: 1.8rem;
+}
+
+footer .copy {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-icon {
+    width: 35px;
+    height: 35px;
+    fill: white;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN (MÓVILES Y TABLETS)
+   ========================================== */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .comodato-banner {
+        margin: 2rem 4%;
+        padding: 2.5rem 1.5rem;
+    }
+}
